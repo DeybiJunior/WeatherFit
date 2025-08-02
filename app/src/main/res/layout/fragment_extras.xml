@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparente">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="MÁS"
+            android:textColor="@color/md_theme_texto"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Título Configuración -->
+            <TextView
+                android:text="Configuración"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/md_theme_texto"
+                android:layout_marginBottom="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Unidad de temperatura (clickeable) -->
+            <LinearLayout
+                android:id="@+id/layoutUnidadTemperatura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_navbar_blur"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:text="Unidades de temperatura"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/md_theme_texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textUnidadSeleccionada"
+                    android:text="Celsius (°C)"
+                    android:textColor="@color/md_theme_texto"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Notificaciones -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="@drawable/bg_navbar_blur"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Notificaciones"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_theme_texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="Recibir alertas meteorológicas"
+                        android:textSize="14sp"
+                        android:textColor="@color/md_theme_texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchNotificaciones"
+                    android:textColor="@color/md_theme_texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Modo oscuro -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="@drawable/bg_navbar_blur"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Modo oscuro"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_theme_texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="Tema oscuro para la aplicación"
+                        android:textSize="14sp"
+                        android:textColor="@color/md_theme_texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchModoOscuro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Preferencias IA (clickeable) -->
+            <LinearLayout
+                android:id="@+id/layoutPreferenciasIA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_navbar_blur"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:text="Preferencias de IA"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/md_theme_texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textPreferenciasIA"
+                    android:text="Configurar respuestas personalizadas"
+                    android:textColor="@color/md_theme_texto"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Sección Compartir -->
+            <TextView
+                android:text="Compartir"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/md_theme_texto"
+                android:layout_marginBottom="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/layoutCompartir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_navbar_blur"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:text="Compartir nuestra app con tus amigos vía redes sociales"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_theme_texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!-- Apps recomendadas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:src="@drawable/facebook"
+                        android:layout_marginEnd="18dp" />
+
+                    <ImageView
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:src="@drawable/whatsapp"
+                        android:layout_marginEnd="18dp" />
+
+                    <ImageView
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:src="@drawable/instagram" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:text="Información"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/md_theme_texto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textLegal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_theme_texto"
+                android:text="Derechos reservados por Deybi Junior © 2025\n\nTérminos y condiciones • Política de privacidad • Contacto"
+                android:textSize="14sp"
+                android:background="@drawable/bg_navbar_blur"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

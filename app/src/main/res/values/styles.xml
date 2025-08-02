@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- res/values/styles.xml -->
+    <style name="CustomBottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <!-- ... otros atributos como itemIconTint, itemTextColor ... -->
+        <item name="itemActiveIndicatorStyle">@style/CustomActiveIndicator</item>
+    </style>
+
+    <style name="CustomActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/navbar</item>
+    </style>
+
+
+
+    //boton estilo
+    <style name="EstiloBotonPersonalizado" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/boton_fondo</item>
+        <item name="android:textColor">@color/iconnavbar</item>
+    </style>
+
+</resources>

@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_inicio"
+        android:icon="@drawable/inicio_selector"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/nav_recomendaciones"
+        android:icon="@drawable/recomendacion_selector"
+        android:title="Recomendacion" />
+    <item
+        android:id="@+id/nav_extras"
+        android:icon="@drawable/mas_selector"
+        android:title="Extras" />
+</menu>
